@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "padding": "20px",
+    }
+  }
+>
+  <h1>
+    My Accounts
+  </h1>
+  <pre>
+    [
+        "0x627306090abab3a6e1400e9345bc60c78a8bef57"
+    ]
+  </pre>
+  <div
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/daap"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "20px",
+        }
+      }
+    >
+      My DAap
+    </a>
+  </div>
+</div>
+`;

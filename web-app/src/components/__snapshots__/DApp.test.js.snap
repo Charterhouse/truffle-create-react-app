@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "padding": "20px",
+    }
+  }
+>
+  <h1>
+    My DApp
+  </h1>
+  <div>
+    <p
+      style={
+        Object {
+          "display": "inline-block",
+          "marginBottom": "20px",
+        }
+      }
+    >
+      Current Balance: 
+      15
+    </p>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "20px",
+        }
+      }
+    >
+      Refresh...
+    </button>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Add 5 to the account balance
+  </button>
+  <div
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/accounts"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "20px",
+        }
+      }
+    >
+      My Accounts
+    </a>
+  </div>
+</div>
+`;

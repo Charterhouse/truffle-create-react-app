@@ -1,0 +1,34 @@
+{
+  "name": "truffle-create-react-app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {    
+    "test": "cd web-app && yarn test",
+    "lint": "standard | snazzy",
+    "lint-fix": "standard --fix --verbose | snazzy"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "build/**",
+      "node_modules/**",
+      "web-app/node_modules/**",
+      "web-app/src/contracts"
+    ],
+    "envs": [
+      "es6",
+      "browser",
+      "jest"
+    ],
+    "globals": [
+      "artifacts",
+      "contract",
+      "assert"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  }
+}
