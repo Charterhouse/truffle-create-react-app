@@ -12,7 +12,7 @@ it('renders without crashing', async () => {
 })
 
 it('renders correctly', async () => {
-  const app = await renderer
+  const home = await renderer
     .create(<Router><Home /></Router>)
-  expect(app.toJSON()).toMatchSnapshot()
+  expect(home.toJSON()).toMatchSnapshot()
 })

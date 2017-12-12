@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import withWeb3 from 'web3/withWeb3'
+import { Wrapper } from 'components/Wrapper'
 
 // Demonstration of a basic dapp with the withWeb3 higher-order component
 class DApp extends React.Component {
@@ -28,7 +29,7 @@ class DApp extends React.Component {
     // const { web3, accounts, contract } = this.props
     const { balance } = this.state
     return (
-      <div style={{ padding: '20px' }}>
+      <Wrapper>
         <h1>My DApp</h1>
         <div>
           <p style={{ display: 'inline-block', marginBottom: '20px' }}>Current Balance: {balance}</p>
@@ -39,7 +40,7 @@ class DApp extends React.Component {
           <Link to='/'>Home</Link>
           <Link to='/accounts' style={{ marginLeft: '20px' }}>My Accounts</Link>
         </div>
-      </div>
+      </Wrapper>
     )
   }
 }
