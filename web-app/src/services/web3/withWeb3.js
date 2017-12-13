@@ -1,5 +1,5 @@
 import React from 'react'
-import getWeb3 from './getWeb3'
+import { getWeb3 } from './getWeb3'
 import { getAccounts, getContractInstance } from './utils'
 
 const withWeb3 = PassedComponent => class extends React.Component {
@@ -36,4 +36,4 @@ const withWeb3 = PassedComponent => class extends React.Component {
   }
 }
 
-export default withWeb3
+export { withWeb3 }

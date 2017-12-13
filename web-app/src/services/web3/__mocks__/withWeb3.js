@@ -37,4 +37,4 @@ const withWeb3 = PassedComponent => class extends React.Component {
   }
 }
 
-export default withWeb3
+export { withWeb3 }

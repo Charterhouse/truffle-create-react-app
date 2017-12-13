@@ -21,7 +21,7 @@ const resolveWeb3 = (resolve) => {
   resolve(web3)
 }
 
-export default () =>
+const getWeb3 = () =>
   new Promise((resolve) => {
     if (process.env.REACT_APP_USE_INJECTED_WEB3 === 'YES') {
       console.log('will try to use injected web3 if possible')
@@ -37,3 +37,5 @@ export default () =>
       resolve(useLocalWeb3Provider())
     }
   })
+
+export { getWeb3 }
