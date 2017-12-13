@@ -1,5 +1,4 @@
 import React from 'react'
-import withWeb3 from 'web3/withWeb3'
 import { Wrapper } from 'components/wrapper'
 import { AppNavigation } from 'components/navigation'
 
@@ -11,4 +10,4 @@ const Accounts = ({ accounts, location }) =>
     <AppNavigation location={location} />
   </Wrapper>
 
-export default withWeb3(Accounts)
+export { Accounts }

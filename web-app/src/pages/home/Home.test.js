@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import { inRouter } from 'test-helpers/router'
-import Home from './Home'
+import { Home } from './Home'
 
 jest.mock('web3/withWeb3')
 

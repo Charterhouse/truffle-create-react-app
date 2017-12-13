@@ -1,5 +1,4 @@
 import React from 'react'
-import withWeb3 from 'web3/withWeb3'
 import { Wrapper } from 'components/wrapper'
 import { AppNavigation } from 'components/navigation'
 
@@ -51,4 +50,4 @@ const Button = ({ children, leftMargin, ...rest }) => (
     : <button {...rest}>{ children }</button>
 )
 
-export default withWeb3(DApp)
+export { DApp }

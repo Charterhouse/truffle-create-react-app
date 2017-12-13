@@ -1,3 +1,3 @@
-import DApp from './DApp'
+import { DApp } from './DApp'
 
-export default DApp
+export { DApp }
