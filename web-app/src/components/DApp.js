@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import withWeb3 from 'web3/withWeb3'
 import { Wrapper } from 'components/Wrapper'
+import { AppNavigation } from 'components/AppNavigation'
 
 // Demonstration of a basic dapp with the withWeb3 higher-order component
 class DApp extends React.Component {
@@ -32,17 +32,23 @@ class DApp extends React.Component {
       <Wrapper>
         <h1>My DApp</h1>
         <div>
-          <p style={{ display: 'inline-block', marginBottom: '20px' }}>Current Balance: {balance}</p>
-          <button style={{ marginLeft: '20px' }} onClick={this.getValue}>Refresh...</button>
+          <P>Current Balance: {balance}</P>
+          <Button leftMargin onClick={this.getValue}>Refresh...</Button>
         </div>
-        <button onClick={this.storeValue}>Add 5 to the account balance</button>
-        <div style={{ marginTop: '20px' }}>
-          <Link to='/'>Home</Link>
-          <Link to='/accounts' style={{ marginLeft: '20px' }}>My Accounts</Link>
-        </div>
+        <Button onClick={this.storeValue}>Add 5 to the account balance</Button>
+        <AppNavigation location={this.props.location} />
       </Wrapper>
     )
   }
 }
+
+const P = ({ children }) =>
+  <p style={{ display: 'inline-block', marginBottom: '20px' }}>{ children }</p>
+
+const Button = ({ children, leftMargin, ...rest }) => (
+  leftMargin
+    ? <button style={{ marginLeft: '20px' }} {...rest}>{ children }</button>
+    : <button {...rest}>{ children }</button>
+)
 
 export default withWeb3(DApp)

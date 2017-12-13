@@ -14,22 +14,30 @@ exports[`renders correctly 1`] = `
   <p>
     Note that Web3 is not loaded for this page.
   </p>
-  <a
-    href="/daap"
-    onClick={[Function]}
-  >
-    My DAap
-  </a>
-  <a
-    href="/accounts"
-    onClick={[Function]}
+  <div
     style={
       Object {
-        "marginLeft": "20px",
+        "marginTop": "20px",
       }
     }
   >
-    My Accounts
-  </a>
+    <a
+      href="/daap"
+      onClick={[Function]}
+    >
+      My DAap
+    </a>
+    <a
+      href="/accounts"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "20px",
+        }
+      }
+    >
+      My Accounts
+    </a>
+  </div>
 </div>
 `;
