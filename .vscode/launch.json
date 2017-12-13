@@ -13,7 +13,7 @@
     "name": "Debug CRA Tests",
     "type": "node",
     "request": "launch",
-    "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+    "runtimeExecutable": "${workspaceRoot}/web-app/node_modules/.bin/react-scripts",
     "runtimeArgs": [
       "--inspect-brk",
       "test"
@@ -23,7 +23,7 @@
       "--no-cache",
       "--env=jsdom"
     ],
-    "cwd": "${workspaceRoot}",
+    "cwd": "${workspaceRoot}/web-app",
     "protocol": "inspector",
     "console": "integratedTerminal",
     "internalConsoleOptions": "neverOpen"
