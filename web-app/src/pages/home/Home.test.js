@@ -3,8 +3,6 @@ import renderer from 'react-test-renderer'
 import { inRouter } from 'test-helpers/router'
 import { Home } from './Home'
 
-jest.mock('web3/withWeb3')
-
 it('renders without crashing', async () => {
   const div = document.createElement('div')
   await ReactDOM.render(inRouter(Home, '/'), div)

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import { Wrapper } from './Wrapper'
 
-jest.mock('web3/withWeb3')
-
 let exampleWrapper
 
 beforeEach(() => {

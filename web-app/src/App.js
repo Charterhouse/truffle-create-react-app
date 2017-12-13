@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import withWeb3 from 'web3/withWeb3'
+import withWeb3 from 'services/web3/withWeb3'
 import { Home } from 'pages/home'
 import { Accounts } from 'pages/accounts'
 import { DApp } from 'pages/dapp'
