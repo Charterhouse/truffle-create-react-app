@@ -1,7 +1,7 @@
 import React from 'react'
 import withWeb3 from 'web3/withWeb3'
-import { Wrapper } from 'components/wrapper/Wrapper'
-import { AppNavigation } from 'components/navigation/AppNavigation'
+import { Wrapper } from 'components/wrapper'
+import { AppNavigation } from 'components/navigation'
 
 // Demonstration of a basic dapp with the withWeb3 higher-order component
 class DApp extends React.Component {

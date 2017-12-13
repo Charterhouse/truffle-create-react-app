@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
       Home
     </a>
     <a
-      href="/daap"
+      href="/dapp"
       onClick={[Function]}
       style={
         Object {
@@ -38,7 +38,7 @@ exports[`renders correctly 1`] = `
         }
       }
     >
-      My DAap
+      My DApp
     </a>
   </div>
 </div>

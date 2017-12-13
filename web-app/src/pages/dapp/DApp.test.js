@@ -7,11 +7,11 @@ jest.mock('web3/withWeb3')
 
 it('renders without crashing', async () => {
   const div = document.createElement('div')
-  await ReactDOM.render(inRouter(DApp, '/daap'), div)
+  await ReactDOM.render(inRouter(DApp, '/dapp'), div)
 })
 
 it('renders correctly', async () => {
   const dapp = await renderer
-    .create(inRouter(DApp, '/daap'))
+    .create(inRouter(DApp, '/dapp'))
   expect(dapp.toJSON()).toMatchSnapshot()
 })

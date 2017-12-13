@@ -1,6 +1,6 @@
 import React from 'react'
-import { Wrapper } from 'components/wrapper/Wrapper'
-import { AppNavigation } from 'components/navigation/AppNavigation'
+import { Wrapper } from 'components/wrapper'
+import { AppNavigation } from 'components/navigation'
 
 export default ({ location }) =>
   <Wrapper>
