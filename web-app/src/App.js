@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Home from 'components/Home'
-import Accounts from 'components/Accounts'
-import DApp from 'components/DApp'
+import Home from 'pages/home/Home'
+import Accounts from 'pages/accounts/Accounts'
+import DApp from 'pages/daap/DApp'
 
 export default () =>
   <Router>

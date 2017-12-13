@@ -1,7 +1,7 @@
 import React from 'react'
 import withWeb3 from 'web3/withWeb3'
-import { Wrapper } from 'components/Wrapper'
-import { AppNavigation } from 'components/AppNavigation'
+import { Wrapper } from 'components/wrapper/Wrapper'
+import { AppNavigation } from 'components/navigation/AppNavigation'
 
 // Simple demonstration of the withWeb3 higher-order component
 const Accounts = ({ accounts, location }) =>
