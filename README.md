@@ -14,7 +14,7 @@
 
 # A Minimal Smart Contract Development Boilerplate
 
-[Truffle](https://github.com/trufflesuite/truffle) is great for developing Solidity smart contracts, and [create-react-app](https://github.com/facebookincubator/create-react-app) is a great way to bootstrap a React project. Unfortunately, the official [truffle box for React](http://truffleframework.com/boxes/react) uses the _reject_ mode of the create-react-app, which may be a disadvantage to many React developers. This box provides a basic integration between truffle and React app **without** using the _reject_ mode of create-react-app.
+[Truffle](https://github.com/trufflesuite/truffle) is great for developing Solidity smart contracts, and [create-react-app](https://github.com/facebookincubator/create-react-app) is a great way to bootstrap a React project. Unfortunately, the official [truffle box for React](http://truffleframework.com/boxes/react) uses the _eject_ mode of the create-react-app, which may be a disadvantage to many React developers. This box provides a basic integration between truffle and React app **without** using the _eject_ mode of create-react-app.
 
 There are two major features:
 
@@ -22,7 +22,7 @@ There are two major features:
 
 - A create-react-app based React project resides in the `web-app` directory with a symlink to the `build/contracts` folder containing ABI definitions (created after running `truffle compile`). The provided React app is intentionally minimalistic to avoid imposing any specific requirements on the developer. 
 
-For more information on how the frontend works, go read the [README.md](https://github.com/adrianmcli/truffle-next/blob/master/client/README.md) located in the `client` directory.
+For more information on how the frontend works, go read the [README.md](https://github.com/Charterhouse/truffle-create-react-app/blob/master/web-app/README.md) located in the `web-app` directory.
 
 ## Installation
 
