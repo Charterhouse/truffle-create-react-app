@@ -8,3 +8,11 @@ export const inRouter = (Component, path) => {
     </Router>
   )
 }
+
+export const renderInRouter = (componentRenderFunction, path) => {
+  return (
+    <Router initialEntries={[ path ]} initialIndex={0}>
+      <Route exact path={path} render={componentRenderFunction} />
+    </Router>
+  )
+}
