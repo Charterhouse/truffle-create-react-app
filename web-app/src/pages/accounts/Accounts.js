@@ -2,7 +2,6 @@ import React from 'react'
 import { Wrapper } from 'components/wrapper'
 import { AppNavigation } from 'components/navigation'
 
-// Simple demonstration of the withWeb3 higher-order component
 const Accounts = ({ accounts, location }) =>
   <Wrapper>
     <h1>My Accounts</h1>

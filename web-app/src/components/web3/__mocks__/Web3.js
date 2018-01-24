@@ -15,9 +15,9 @@ const contract = {
   }
 }
 
-const withWeb3 = PassedComponent => class extends React.Component {
+export class Web3 extends React.Component {
   state = {
-    web3: null,
+    web3: jest.fn(),
     accounts: [
       '0x627306090abab3a6e1400e9345bc60c78a8bef57'
     ],
@@ -25,16 +25,6 @@ const withWeb3 = PassedComponent => class extends React.Component {
   }
 
   render () {
-    const { web3, accounts, contract } = this.state
-    return (
-      <PassedComponent
-        web3={web3}
-        accounts={accounts}
-        contract={contract}
-        {...this.props}
-      />
-    )
+    return this.props.render(this.state)
   }
 }
-
-export { withWeb3 }

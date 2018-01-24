@@ -1,3 +1,2 @@
-import { withWeb3 } from './withWeb3'
-
-export { withWeb3 }
+export { getWeb3 } from './getWeb3'
+export { getAccounts, getContractInstance } from './utils'
