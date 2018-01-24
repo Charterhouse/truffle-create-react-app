@@ -2,6 +2,10 @@
 
 This is the front-end client for our dapp. It is built with `create-react-app` and uses a higher-order component (HOC) so we can easily let each page connect to the blockchain and the contract instance.
 
+## App
+
+`App` is where the actual navigation happens and where we load Web3.
+In the `render` prop provided to `Web3` component, we check if `web3`, `accounts`, and `contract` are already loaded and if so, we perform the appropriate navigation depending on the current path.
 
 ## pages
 
@@ -15,17 +19,21 @@ Initial home page corresponding to the `/` url.
 
 ### pages/accounts/Accounts.js
 
-This is a page listing the accounts returned from Web3. This file demonstrates the basic use of the `withWeb3` HOC.
+This is a page listing the accounts returned from Web3. The `Accounts` component is stateless and expects `location` object from the `Router` and `accounts` from Web3. Both are injected in `App.js` component.
 
 ### pages/dapp/DApp.js
 
-This is a barebones demonstration dapp that utilizes the `withWeb3` HOC, but also makes calls to the contract. More specifically, it stores a value and gets a value.
+The `DApp` components makes calls to the `contract` given in one of the props provided by `Web3` component.
 
 ## components
 
 Components hold some shared presentational components that support navigation and a bit of styling. We wanted to avoid imposing any specific framework so at least we could remove some noise coming from styling issues by giving it their own abstractions.
 
 We encourage you to try [glamorous](https://github.com/paypal/glamorous) for handling styling in React.
+
+### components/web3
+
+Here, in the `Web3.js` file, we define our `Web3` component that follows *render props* pattern. As we can see, the `render` prop function receives an object with three attributes: `web3`, `accounts`, and `contract`.
 
 ### components/navigation
 
@@ -68,7 +76,7 @@ This file contains environment variables.
 | BROWSER | `google chrome` | the browser to be used by CRA |
 | NODE_PATH | `src/`  | Default import path. It will let us to use import paths |
 | REACT_APP_USE_INJECTED_WEB3 | `NO` | If set to `NO` the `web3` instance potentially injected in the browser (like _MetaMask_)will be ignored. Set it to `YES` to use `web3` object that was injected. |
-| REACT_APP_WEB3_PROVIDER_URL | `http://localhost:9545` | The local provider URL. Relevant only when `REACT_APP_USE_INJECTED_WEB3` is set to `NO`. This is the dafault provider URL used by truffle development console. |
+| REACT_APP_WEB3_PROVIDER_URL | `http://localhost:9545` | The local provider URL. Relevant only when `REACT_APP_USE_INJECTED_WEB3` is set to `NO`. This is the default provider URL used by truffle development console. |
 
 ## conventions
 

@@ -65,4 +65,54 @@ For more information on how the frontend works, go read the [README.md](https://
     ```
 ## Visual Studio Code integration
 
-[TBD...]
+The project is ready for Visual Studio Code. Out of the box it supports integration with [standardJS](https://standardjs.com) and [vscode-jest](https://github.com/jest-community/vscode-jest).
+
+### standardJS
+
+The integration with standardJS is done on two levels: `settings.json` for the VSCode Workspace and the top-level `package.json`.
+
+The workspace level options in `settings.json` are the following:
+
+```json
+"javascript.validate.enable": false,
+"standard.usePackageJson": true,
+"standard.autoFixOnSave": true
+```
+
+The top-level `package.json` includes the following standardJS configuration:
+
+```json
+"standard": {
+  "parser": "babel-eslint",
+  "ignore": [
+      "build/**",
+      "node_modules/**",
+      "web-app/node_modules/**",
+      "web-app/src/contracts"
+  ],
+  "envs": [
+      "es6",
+      "browser",
+      "jest"
+  ],
+  "globals": [
+      "artifacts",
+      "contract",
+      "assert"
+  ]
+}
+```
+
+The only thing that still remains to be performed by the user is to install the `JavaScriopt Standard Style` extension (authored by Sam Chen).
+
+### vscode-jest
+
+The vscode-jest extension (authored by orta and jest community) provides integration with jest test runner. Because the react project is in a subfolder, additional configuration has been added to the workspace `settings.json` file:
+
+```json
+"jest.pathToJest": "npm test --",
+"jest.rootPath": "web-app",
+"jest.restartJestOnSnapshotUpdate": true
+```
+
+Note, that for the very same reason, Jest extension needs to be started manually via command palette (`CMD+SHIFT+P` and then *Jest: Start Runner*).
