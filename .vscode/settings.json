@@ -1,4 +1,14 @@
 {
+  "javascript.validate.enable": false,
+  "standard.usePackageJson": true,
+  "standard.autoFixOnSave": true,
   "jest.pathToJest": "npm test --",
-  "jest.rootPath": "web-app"
+  "jest.rootPath": "web-app",
+  "jest.restartJestOnSnapshotUpdate": true,
+  "spellright.language": "en",
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }
