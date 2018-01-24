@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
     Home
   </h1>
   <p>
-    Note that Web3 is not loaded for this page.
+    Note that Web3 is already loaded.
   </p>
   <div
     style={
