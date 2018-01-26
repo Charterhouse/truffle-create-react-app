@@ -12,7 +12,7 @@
 
 ---
 
-# A Minimal Smart Contract Development Boilerplate
+# A Minimal Smart Contract Development Boilerplate with `create-react-app`-based frontend.
 
 [Truffle](https://github.com/trufflesuite/truffle) is great for developing Solidity smart contracts, and [create-react-app](https://github.com/facebookincubator/create-react-app) is a great way to bootstrap a React project. Unfortunately, the official [truffle box for React](http://truffleframework.com/boxes/react) uses the _eject_ mode of the create-react-app, which may be a disadvantage to many React developers. This box provides a basic integration between truffle and React app **without** using the _eject_ mode of create-react-app.
 
@@ -28,7 +28,7 @@ For more information on how the frontend works, go read the [README.md](https://
 
 1. Install Truffle globally.
     ```bash
-    npm install -g truffle
+    yarn global add truffle
     ```
 
 2. Download the box. This also takes care of installing the necessary dependencies.
@@ -47,22 +47,32 @@ For more information on how the frontend works, go read the [README.md](https://
     migrate
     ```
 
-5. Run the create-react-app server for the front-end. Smart contract changes must be manually recompiled and migrated.
+5. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
     ```bash
-    // Change directory to the front-end folder
+    # If inside the development console.
+    test
+
+    # If outside the development console..
+    truffle test
+    ```
+
+6. Run the create-react-app server for the front-end. Smart contract changes must be manually recompiled and migrated.
+    ```bash
+    # Change directory to the front-end folder
     cd web-app
-    // Serves the front-end on http://localhost:3000
+    # Serves the front-end on http://localhost:3000
     yarn start
     ```
 
-6. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
-    ```bash
-    // If inside the development console.
-    test
+7. We included some basic tests for our react components. You can run them from the `web-app` folder:
 
-    // If outside the development console..
-    truffle test
+    ```bash
+    # Change directory to the front-end folder
+    cd web-app
+    yarn test               # for watch mode
+    CI=TRUE yarn test       # for non-watch mode
     ```
+
 ## Visual Studio Code integration
 
 The project is ready for Visual Studio Code. Out of the box it supports integration with [standardJS](https://standardjs.com) and [vscode-jest](https://github.com/jest-community/vscode-jest).
@@ -116,3 +126,5 @@ The vscode-jest extension (authored by orta and jest community) provides integra
 ```
 
 Note, that for the very same reason, Jest extension needs to be started manually via command palette (`CMD+SHIFT+P` and then *Jest: Start Runner*).
+
+> jest extension for VSCode only runs the tests for the web-app. You still need to run solidity tests using the truffle development console.
