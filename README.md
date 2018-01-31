@@ -1,6 +1,6 @@
 <h1 align="center">Truffle and React (create-react-app)</h1> <br>
 <p align="center">
-  <img alt="comet" src="./box-img-lg.png" width="240">
+  <img alt="truffle-pig" src="https://github.com/Charterhouse/truffle-create-react-app/blob/master/box-img-lg.png?raw=true" width="240">
 </p>
 <p align="center">Rapid Ethereum Dapp Development</p>
 
