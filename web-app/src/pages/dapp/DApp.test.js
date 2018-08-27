@@ -44,5 +44,12 @@ it('renders without crashing', async () => {
 it('renders correctly', async () => {
   const dapp = await renderer
     .create(dappInRoute)
+  await waitForAsyncCallsToComplete()
   expect(dapp.toJSON()).toMatchSnapshot()
 })
+
+const waitForAsyncCallsToComplete = async () => {
+  // queue another item on the event loop callback queue
+  // and wait for it to be executed
+  await Promise.resolve()
+}
