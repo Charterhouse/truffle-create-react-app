@@ -8,6 +8,7 @@
   <img alt="made for ethereum" src="https://img.shields.io/badge/made_for-ethereum-771ea5.svg">
   <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <a href="https://standardjs.com"><img alt="StandardJS" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"></a>
+  <a href="https://travis-ci.com/Charterhouse/truffle-create-react-app"><img alt="Build Status" src="https://travis-ci.com/Charterhouse/truffle-create-react-app.svg?branch=master"></a>
 </p>
 
 ---
