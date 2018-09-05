@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Home } from 'pages/home'
 import { Accounts } from 'pages/accounts'
 import { DApp } from 'pages/dapp'
-import { Web3 } from 'components/web3'
+import { Web3Loader } from 'components/web3'
 
 const renderComponent = (Component, routeProps, web3Props) => (
   <Component {...web3Props}
@@ -16,7 +16,7 @@ const web3IsReady = ({web3, accounts, contract}) => {
 
 export default () =>
   <Router>
-    <Web3 render={web3Props => {
+    <Web3Loader render={web3Props => {
       if (web3IsReady(web3Props)) {
         return (
           <div>
