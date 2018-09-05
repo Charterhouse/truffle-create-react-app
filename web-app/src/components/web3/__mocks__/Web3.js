@@ -15,7 +15,7 @@ const contract = {
   }
 }
 
-export class Web3 extends React.Component {
+export class Web3Loader extends React.Component {
   state = {
     web3: jest.fn(),
     accounts: [

@@ -1,7 +1,7 @@
 import React from 'react'
 import { getWeb3, getAccounts, getContractInstance } from 'services/web3'
 
-export class Web3 extends React.Component {
+export class Web3Loader extends React.Component {
   state = { web3: null, accounts: null, contract: null }
 
   async componentDidMount () {
