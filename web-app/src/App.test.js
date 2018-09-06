@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import App from './App'
 
-jest.mock('components/web3/Web3')
+jest.mock('components/web3/Web3Loader')
 
 it('renders without crashing', async () => {
   const div = document.createElement('div')

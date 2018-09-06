@@ -1,1 +1,1 @@
-export { Web3Loader } from './Web3'
+export { Web3Loader } from './Web3Loader'
